@@ -11,10 +11,8 @@ app.get('/health', (req, res) => {
 });
 
 // For local testing only
-if (require.main === module) {
-  app.listen(port, () => {
-    console.log(`Sample backend listening at http://localhost:${port}`);
-  });
-}
+app.listen(port, () => {
+  console.log(`Sample backend listening at http://localhost:${port}`);
+});
 
 module.exports = app;
