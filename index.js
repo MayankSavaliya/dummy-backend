@@ -6,6 +6,9 @@ const port = process.env.PORT || 3000;
 app.get('/', (req, res) => {
   res.json({ message: 'Hello, world!' });
 });
+app.get('/health', (req, res) => {
+  res.json({ status: 'ok' }); 
+});
 
 // For local testing only
 if (require.main === module) {
