@@ -9,8 +9,10 @@ app.get('/', (req, res) => {
 app.get('/health', (req, res) => {
   res.json({ status: 'ok' }); 
 });
-
-// For local testing only
+app.get('/health/abc', (req, res) => {
+  // For local testing only
+  res.json({ status: 'ok', message: 'This is a test endpoint.' });
+});
 app.listen(port, () => {
   console.log(`Sample backend listening at http://localhost:${port}`);
 });
